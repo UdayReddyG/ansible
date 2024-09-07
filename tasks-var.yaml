@@ -1,8 +1,7 @@
 - name: local vs global
   hosts: frontend
-  vars:
-   Name: "uday kiran"
-   studying: "DevOps with Aws"
+  vars_files:
+   - separatevar.yaml
   tasks:
   - name: task01
     ansible.builtin.debug:
