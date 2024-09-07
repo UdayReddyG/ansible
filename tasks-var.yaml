@@ -1,7 +1,7 @@
 - name: local vs global
   hosts: frontend
   vars_files:
-   - separatevar.yaml
+   - separatavar.yaml
   tasks:
   - name: task01
     ansible.builtin.debug:
