@@ -6,4 +6,4 @@
   tasks:
   - name: practising variables
     ansible.builtin.debug:
-    msg: "Hello! Iam {{Name}} currently doing {{studying}} course online."
+     msg: "Hello! Iam {{Name}} currently doing {{studying}} course online."
