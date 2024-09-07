@@ -1,0 +1,16 @@
+- name: local vs global
+  hosts: frontend
+  vars:
+   Name: "uday kiran"
+   studying: "DevOps with Aws"
+  tasks:
+  - name: task01
+    ansible.builtin.debug:
+     msg: "Hello! Iam {{Name}} currently doing {{studying}} course"
+
+  - name: task02
+    vars:
+     Name: "uday reddy"
+     studying: "course by shiva"
+    ansible.builtin.debug:
+     msg: "Hello! Iam {{Name}} currently doing {{studying}} course"
