@@ -1,0 +1,9 @@
+- name: printing using var
+  hosts: frontend
+  vars:
+   Name: "uday kiran"
+   studying: "DevOps with AWS"
+  tasks:
+  - name: practising variables
+    ansible.builtin.debug:
+    msg: "Hello! Iam {{Name}} currently doing {{studying}} course online."
