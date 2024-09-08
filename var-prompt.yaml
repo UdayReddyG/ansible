@@ -1,11 +1,11 @@
 - name: reading variable
   hosts: frontend
   vars_prompt:
-  - name: Name
-    prompt: enter your name
-  - name: studying
-    prompt: what are you studying
+   - name: Name
+     prompt: enter your name
+   - name: studying
+     prompt: what are you studying
   tasks:
   - name: asking at run time
     ansible.builtin.debug:
-     msg: "Hello! Iam {{name}} currently {{studying}}"
+     msg: "Hello! Iam {{Name}} currently {{studying}}"
