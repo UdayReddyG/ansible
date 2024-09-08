@@ -1,7 +1,7 @@
 - name: reading variable
   hosts: frontend
   vars_prompt:
-  - name: name
+  - name: Name
     prompt: enter your name
   - class: studying
     prompt: what are you studying
