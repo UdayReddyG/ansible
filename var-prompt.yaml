@@ -1,10 +1,10 @@
 - name: reading variable
   hosts: frontend
   vars_prompt:
-   - name: name
-     prompt: enter your name
-   - class: studying
-     prompt: what are you studying
+  - name: name
+    prompt: enter your name
+  - class: studying
+    prompt: what are you studying
   tasks:
   - name: asking at run time
     ansible.builtin.debug:
