@@ -1,5 +1,5 @@
 - name: checking the user
-  hosts: web
+  hosts: frontend
   become: yes
   tasks:
   - name: getting user
