@@ -1,0 +1,7 @@
+- name: filters
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: practicing filters
+    ansible.builtin.debug:
+     msg: "Hello {{course}}"
