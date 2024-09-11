@@ -18,4 +18,4 @@
      instance_type: t2.micro
      security_group: sg-02885d0f240bf1152
      image_id: ami-09c813fb71547fc4f
-    loop: instances
+    loop: "{{instances}}"
