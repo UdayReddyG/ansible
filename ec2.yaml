@@ -22,5 +22,5 @@
     register: ec2
 
   - name: watching
-    ansible.bulitin.debug:
+    ansible.builtin.debug:
      msg: "{{ec2}}"
