@@ -19,3 +19,4 @@
      security_group: sg-02885d0f240bf1152
      image_id: ami-09c813fb71547fc4f
     loop: "{{instances}}"
+    register: ec2
