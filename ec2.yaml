@@ -27,6 +27,7 @@
      zone: the4teen.info
      record: "{{item.item}}.the4teen.info"
      overwrite: true
+     value: "{{item.instances[0].private_ip_address}}"
      type: A
      ttl: 1
      wait: true
