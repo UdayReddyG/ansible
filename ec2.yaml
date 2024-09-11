@@ -21,6 +21,12 @@
     loop: "{{instances}}"
     register: ec2
 
-  - name: watching
-    ansible.builtin.debug:
-     msg: "{{ec2}}"
+  - name: r53
+    amazon.aws.route53:
+     state: present
+     zone: the4teen.info
+     record: "{{item.item}}.{{the4teen.info}}"
+     type: A
+     ttl: 1
+     wait: true
+    loop: "{{ec2}}"
