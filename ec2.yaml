@@ -26,6 +26,7 @@
      state: present
      zone: the4teen.info
      record: "{{item.item}}.the4teen.info"
+     overwrite: true
      type: A
      ttl: 1
      wait: true
