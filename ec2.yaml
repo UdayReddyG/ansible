@@ -12,7 +12,7 @@
     - frontend
   tasks:
   - name: creating servers
-    ansible.aws.ec2_instance:
+    amazon.aws.ec2_instance:
      name: "{{item}}"
      vpc_subnet_id: subnet-07cb2872dc036f288
      instance_type: t2.micro
