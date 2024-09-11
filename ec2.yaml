@@ -20,3 +20,7 @@
      image_id: ami-09c813fb71547fc4f
     loop: "{{instances}}"
     register: ec2
+
+  - name: watching
+    ansible.bulitin.debug:
+     msg: "{{ec2}}"
