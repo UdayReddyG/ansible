@@ -29,4 +29,4 @@
      type: A
      ttl: 1
      wait: true
-    loop: "{{ec2}}"
+    loop: "{{ec2.results}}"
