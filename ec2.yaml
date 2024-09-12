@@ -21,7 +21,7 @@
     loop: "{{instances}}"
     register: ec2
 
-  - name: r53
+  - name: r53 private
     amazon.aws.route53:
      state: present
      zone: the4teen.info
@@ -31,3 +31,15 @@
      ttl: 1
      wait: true
     loop: "{{ec2.results}}"
+
+  - name: r53 public
+    amazon.aws.route53:
+     state: present
+     zone: the4teen.info
+     record: "the4teen.info"
+     value: "{{item.instances[0].public_ip_address}}"
+     type: A
+     ttl: 1
+     wait: true
+    loop: "{{ec2.results}}"
+    when: ec2.results.item == "frontend"
