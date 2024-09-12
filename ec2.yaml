@@ -42,4 +42,4 @@
      ttl: 1
      wait: true
     loop: "{{ec2.results}}"
-    when: ec2.results.item == "frontend"
+    when: item.item == "frontend"
